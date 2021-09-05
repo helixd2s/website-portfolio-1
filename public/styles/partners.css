@@ -1,0 +1,1 @@
+.container .partners{width:100%;height:calc(9 * var(--dp-scale));display:flex;justify-content:center;justify-self:center;align-items:center;text-align:center}.container .partners .columns{width:100%;display:flex;justify-content:center;justify-self:center;align-items:center;text-align:center;gap:calc(4 * var(--dp-scale))}.container .partners .columns .vector{display:inline-block}
