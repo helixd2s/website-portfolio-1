@@ -1,0 +1,3 @@
+@function dpx($size) {
+  @return calc(#{$size} * var(--dp-scale));
+}

@@ -1,0 +1,124 @@
+@import 'styles/utils';
+
+.container {
+  .header {
+    min-height: dpx(35.625);
+    position: relative;
+
+    > .carousel {
+      bottom: dpx(1);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: dpx(0.75);
+      z-index: 2;
+      height: 1rem;
+
+      .circle {
+        display: block;
+        width: dpx(0.5);
+        height: dpx(0.5);
+        border-radius: 50%;
+        background-color: #B6BAC7;
+        
+        &.active {
+          background-color: #5E81FE;
+        }
+      }
+    }
+
+    > .columns {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+
+      > .column {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          min-width: 100%;
+          min-height: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+
+        .padding {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          box-sizing: border-box;
+          min-width: 100%;
+          height: 100%;
+          padding-top: dpx(4);
+          padding-bottom: dpx(1);
+
+          
+
+          .content {
+            display: grid;
+            min-width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            grid-template-rows: 1fr dpx(3);
+
+            .columns {
+              height: 100%;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              text-align: center;
+
+              p {
+                line-height: dpx(1.5);
+              }
+
+              h6 {
+                font-weight: bold;
+                line-height: dpx(1);
+                color: #3D4F9F;
+              }
+
+              h1 {
+                line-height: dpx(2);
+                font-size: dpx(3);
+                font-weight: normal;
+                color: #3D4F9F;
+              }
+            }
+
+            
+
+            
+            
+          }
+        }
+      }
+    }
+  }
+}

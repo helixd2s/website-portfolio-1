@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "mkdirp": "^1.0.4",
+    "node-sass-middleware-5": "^0.0.2",
+    "sass": "^1.39.0",
+    "twig": "^1.15.4"
+  }
+}
