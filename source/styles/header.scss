@@ -1,0 +1,63 @@
+@import "lib/utils";
+
+.header {
+  background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+  height: dpx(35.625);
+  width: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    
+
+    .swiper-wrapper {
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: dpx(5);
+        //justify-content: center;
+        //justify-self: center;
+        text-align: center;
+        box-sizing: border-box;
+
+        &.main {
+          background-image: url("../images/header.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-origin: border-box;
+          background-clip: border-box;
+          background-position: center center;
+          background-attachment: local;
+        }
+
+        p {
+          line-height: dpx(1.5);
+          font-family: Roboto;
+          font-size: dpx(1);
+          width: dpx(32);
+          color: #8D96BD;
+        }
+
+        h6 {
+          padding: 0;
+          margin: dpx(0.75);
+          font-weight: bold;
+          line-height: dpx(1.5);
+          font-size: dpx(0.625);
+          color: #3D4F9F;
+        }
+
+        h1 {
+          padding: 0;
+          margin: dpx(0.75);
+          line-height: dpx(3);
+          font-size: dpx(3);
+          font-weight: normal;
+          color: #3D4F9F;
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,40 @@
+@import "lib/utils";
+@import "fonts";
+@import "navbar";
+@import "buttons";
+@import "header";
+@import "partners";
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  border: none 0px transparent;
+  box-sizing: border-box;
+  font-family: Quicksand;
+  font-size: dpx(0.75);
+  color: #697CA6;
+  
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #697CA6;
+  }
+
+  html {
+    
+  }
+  
+  body {
+    min-height: 100vh;
+    --dp-scale: 1rem;
+
+    .container {
+      margin: auto;
+      width: 100%;
+      max-width: 1440px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      min-height: 100vh;
+    }
+  }
+}

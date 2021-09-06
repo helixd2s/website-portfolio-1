@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet")
+  body
+    
+    .container
+      .navbar 
+        .profile 
+          .circle
+            img(src="",alt="")
+        .menu 
+          a.active(href="#")="Home"
+          a(href="#")="Blog"
+          a(href="#")="Features"
+          a(href="#")="Documentation"
+        .social 
+          img(src="images/social/facebook.svg")
+          img(src="images/social/telegram.svg")
+          img(src="images/social/twitter.svg")
+          img(src="images/social/medium.svg")
+        .started 
+          button.light-blue()="Get started"
+      .header 
+        .swiper
+          .swiper-wrapper
+            .swiper-slide.main
+              h6="PLAN YOUR LIFE"
+              h1="Increase your "
+                b="productivity"
+              p
+                | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                | Usu atqui laudem an, insolens gubergren similique est cu.
+                | Et vel modus congue vituperata.
+              button.play 
+                img(src="images/play.svg",alt="")
+
+          .swiper-pagination
+      .partners
+        img(src="images/partners/bitbucket.svg",alt="")
+        img(src="images/partners/applewatch.svg",alt="")
+        img(src="images/partners/facebook.svg",alt="")
+        img(src="images/partners/atlassian.svg",alt="")
+        img(src="images/partners/audi.svg",alt="")
+
+    script(src="scripts/main.js" defer async)

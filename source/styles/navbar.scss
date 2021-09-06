@@ -1,0 +1,59 @@
+@import "lib/utils";
+
+.navbar {
+  padding-left: dpx(7.25);
+  padding-right: dpx(7.25);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  width: 100%;
+  grid-template-columns: auto 1fr auto auto;
+  height: dpx(5);
+  box-sizing: border-box;
+
+  .menu {
+    box-sizing: border-box;
+    padding-right: dpx(2);
+    padding-left: dpx(4.5);
+    display: flex;
+    width: 100%;
+    gap: dpx(2.5);
+  
+    a.active {
+      color: #5E81FE;
+    }
+
+  }
+
+  .social {
+    box-sizing: border-box;
+    padding-right: dpx(2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    gap: dpx(2);
+
+    img {
+      
+    }
+  }
+
+  .profile {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+
+    .circle {
+      box-sizing: border-box;
+      background-color: #5E81FE;
+      width: dpx(1.65);
+      height: dpx(1.65);
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+}

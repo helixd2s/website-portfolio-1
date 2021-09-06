@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Quicksand;
+  src: local("Quicksand"), url("../fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  src: local("Roboto"), url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: local("Roboto"), url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: lighter;
+  src: local("Roboto"), url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  font-style: italic, oblique;
+  src: local("Roboto"), url("../fonts/Roboto-Italic.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  font-style: italic, oblique;
+  src: local("Roboto"), url("../fonts/Roboto-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: lighter;
+  font-style: italic, oblique;
+  src: local("Roboto"), url("../fonts/Roboto-LightItalic.ttf");
+}

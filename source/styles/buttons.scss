@@ -1,6 +1,7 @@
-@import 'styles/utils';
+@import "lib/utils";
 
-button.light-blue {
+button {
+  box-sizing: border-box;
   padding-top: dpx(0.75);
   padding-bottom: dpx(0.75);
   padding-left: dpx(1);
@@ -9,31 +10,31 @@ button.light-blue {
   background-color: #D2E1FF;
   border-radius: 2px;
   border: none 0px transparent;
-  box-sizing: border-box;
   font-size: dpx(0.75);
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+  font-weight: bold;
+}
+
+button.light-blue {
+  color: #3A79FF;
+  background-color: #D2E1FF;
 }
 
 button.play {
   margin-left: auto;
   margin-right: auto;
-  border: none 0px transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   width: dpx(3.5);
   height: dpx(3.5);
   border-radius: 50%;
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
   background-color: #FFFFFF; 
   color: #3A79FF;
-  cursor: pointer;
 }

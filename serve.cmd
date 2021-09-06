@@ -1,2 +1,2 @@
-call nodemon -e .js,.twig,.html app.js  
+call npx webpack serve
 pause
