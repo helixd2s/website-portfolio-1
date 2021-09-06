@@ -1,0 +1,68 @@
+.manage {
+  grid-template-columns: dpx(26) dpx(41);
+  box-sizing: border-box;
+  display: grid;
+  background-color: #F5F8FF;
+  width: 100%;
+  height: dpx(48.5);
+  
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+
+  > img {
+    object-fit: cover;
+    object-position: center center;
+    padding-top: dpx(10.625);
+    box-sizing: border-box;
+  }
+
+  .content {
+    padding-top: dpx(13);
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    //justify-content: center;
+    //justify-self: center;
+
+    h6 {
+      font-size: dpx(0.625);
+    }
+
+    h1 {
+      font-weight: normal;
+    }
+
+    b {
+      font-weight: bold;
+    }
+
+    p {
+      line-height: dpx(1.8);
+      font-size: dpx(1);
+      font-family: Roboto;
+    }
+
+    .buttons {
+      text-align: left;
+      display: flex;
+      align-items: left;
+      //justify-content: center;
+      //justify-self: center;
+
+      button {
+        margin-right: dpx(0.125);
+        width: dpx(8);
+
+        img {
+          padding-left: dpx(0.25);
+        }
+      }
+    }
+
+  }
+
+  
+}

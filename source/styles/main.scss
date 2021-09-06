@@ -4,6 +4,7 @@
 @import "buttons";
 @import "header";
 @import "partners";
+@import "manage";
 
 html, body {
   padding: 0px;
@@ -12,6 +13,7 @@ html, body {
   box-sizing: border-box;
   font-family: Quicksand;
   font-size: dpx(0.75);
+  line-height: dpx(1);
   color: #697CA6;
   
 
