@@ -23,6 +23,41 @@ html, body {
     color: #697CA6;
   }
 
+  b {
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: dpx(0.8);
+    margin-bottom: dpx(0.8);
+    line-height: dpx(1.8);
+    font-family: Roboto;
+    font-size: dpx(1);
+    color: #8D96BD;
+  }
+
+  h6 {
+    padding: 0;
+    margin-top: dpx(0.8);
+    margin-bottom: dpx(0.8);
+    font-weight: bold;
+    line-height: dpx(1.5);
+    font-size: dpx(0.625);
+    color: #3D4F9F;
+  }
+
+  h1 {
+    padding: 0;
+    margin-top: dpx(0.8);
+    margin-bottom: dpx(0.8);
+    line-height: dpx(3);
+    font-size: dpx(2.253);
+    font-weight: normal;
+    color: #3D4F9F;
+  }
+
+
+
   html {
     
   }
@@ -35,6 +70,7 @@ html, body {
       margin: auto;
       width: 100%;
       max-width: 1440px;
+      min-width: 1440px;
       box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
       min-height: 100vh;
     }

@@ -32,29 +32,7 @@
         }
 
         p {
-          line-height: dpx(1.5);
-          font-family: Roboto;
-          font-size: dpx(1);
           width: dpx(32);
-          color: #8D96BD;
-        }
-
-        h6 {
-          padding: 0;
-          margin: dpx(0.75);
-          font-weight: bold;
-          line-height: dpx(1.5);
-          font-size: dpx(0.625);
-          color: #3D4F9F;
-        }
-
-        h1 {
-          padding: 0;
-          margin: dpx(0.75);
-          line-height: dpx(3);
-          font-size: dpx(3);
-          font-weight: normal;
-          color: #3D4F9F;
         }
       }
     }
