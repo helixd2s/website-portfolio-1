@@ -8,6 +8,7 @@
 @import "about";
 @import "statistics";
 @import "reading";
+@import "customers";
 
 
 html, body {
@@ -25,10 +26,6 @@ html, body {
   font-size: dpx(0.75);
   line-height: dpx(1);
   color: var(--text-color);
-  
-
-  
-  
   
 
   a {
@@ -96,6 +93,7 @@ html, body {
       min-width: 1440px;
       box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
       min-height: 100vh;
+      overflow: hidden;
     }
   }
 }

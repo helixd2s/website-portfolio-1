@@ -1,0 +1,137 @@
+.customers {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-columns: dpx(46.3125) 1fr;
+  height: dpx(30);
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+
+  * {
+    //padding: 0px;
+    //margin: 0px;
+  }
+
+  .heading {
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: dpx(17.25);
+    padding-right: dpx(8.25);
+    height: 100%;
+
+    h1 {
+      font-size: dpx(2.25);
+      line-height: dpx(2.8125);
+    }
+
+    p {
+      font-family: "Open Sans";
+      font-size: dpx(0.75);
+      line-height: dpx(1.4375);
+    }
+  }
+
+  
+  .cards {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    width: 100%;
+    gap: dpx(4.875);
+    
+
+    .swiper {
+      width: dpx(54.875);
+      height: dpx(10.960625);
+      overflow: visible;
+
+      .swiper-wrapper {
+        width: 100%;
+        overflow: visible;
+    
+        
+
+        .swiper-slide {
+          &.swiper-slide-next {
+            > * {
+              opacity: 0.6;
+            }
+          }
+
+          > * {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #D8E3FE;
+            //margin: auto;
+            
+    
+            background-color: white;
+            box-sizing: border-box;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+
+            overflow: visible;
+            position: relative;
+
+            .content {
+              padding-left: dpx(4.3125);
+              padding-right: dpx(4.3125);
+              padding-top: dpx(2.568125);
+              padding-bottom: dpx(2.568125);
+              font-size: dpx(0.875);
+              line-height: dpx(1.6875);
+
+              h1 {
+                margin-top: 0px;
+                margin-bottom: dpx(2);
+              }
+
+              p {
+                margin-top: 0px;
+                margin-bottom: dpx(0);
+                font-size: dpx(0.875);
+                line-height: dpx(1.5);
+              }
+            }
+
+            .avatar {
+              
+              position: absolute;
+              overflow: visible;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%) translateY(-50%);
+              width: dpx(3.875);
+              height: dpx(3.875);
+              background-image: var(--bg-image);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-origin: border-box;
+              background-clip: border-box;
+              background-position: center center;
+              background-attachment: local;
+              border-radius: 50%;
+
+            }
+            
+          }
+
+        }
+    
+      }
+    
+    }
+
+    .swiper-pagination {
+      height: dpx(0.5);
+    }
+  }
+}
