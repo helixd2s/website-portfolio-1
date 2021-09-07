@@ -25,11 +25,35 @@ const header = new Swiper('.header .swiper', {
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.header .swiper-pagination',
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.header .swiper-scrollbar',
+  },
+});
+
+
+//
+const reading = new Swiper('.reading .swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  modules: [Navigation, Pagination],
+
+  navigation: {
+    nextEl: ".reading .swiper-button-next",
+    prevEl: ".reading .swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.reading .swiper-pagination',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.reading .swiper-scrollbar',
   },
 });

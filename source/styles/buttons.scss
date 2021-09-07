@@ -35,6 +35,11 @@ button {
   margin: 0;
 }
 
+button.transparent {
+  color: #A6B6DA;
+  background-color: transparent;
+}
+
 button.light-blue {
   color: var(--blue-text);
   background-color: var(--light-blue);
