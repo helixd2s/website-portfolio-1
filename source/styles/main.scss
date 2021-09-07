@@ -6,8 +6,15 @@
 @import "partners";
 @import "manage";
 @import "about";
+@import "statistics";
 
 html, body {
+  --white: #FFFFFF;
+  --paragraph-color: #8D96BD;
+  --title-color: #3D4F9F;
+  --subtitle-color: #4074F8;
+  --text-color: #697CA6;
+
   padding: 0px;
   margin: 0px;
   border: none 0px transparent;
@@ -15,13 +22,17 @@ html, body {
   font-family: Quicksand;
   font-size: dpx(0.75);
   line-height: dpx(1);
-  color: #697CA6;
+  color: var(--text-color);
+  
+
+  
+  
   
 
   a {
     font-weight: bold;
     text-decoration: none;
-    color: #697CA6;
+    color: var(--text-color);
   }
 
   b {
@@ -34,7 +45,7 @@ html, body {
     line-height: dpx(1.8);
     font-family: Roboto;
     font-size: dpx(1);
-    color: #8D96BD;
+    color: var(--paragraph-color);
   }
 
   h6 {
@@ -44,7 +55,7 @@ html, body {
     font-weight: bold;
     line-height: dpx(1.5);
     font-size: dpx(0.625);
-    color: #3D4F9F;
+    color: var(--title-color);
   }
 
   h1 {
@@ -54,7 +65,7 @@ html, body {
     line-height: dpx(3);
     font-size: dpx(2.253);
     font-weight: normal;
-    color: #3D4F9F;
+    color: var(--title-color);
   }
 
   h2 {
@@ -64,7 +75,7 @@ html, body {
     line-height: dpx(3);
     font-size: dpx(1.5);
     font-weight: bold;
-    color: #3D4F9F;
+    color: var(--title-color);
   }
 
 

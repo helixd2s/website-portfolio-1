@@ -1,13 +1,23 @@
 @import "lib/utils";
 
+body {
+  --blue-text: #3A79FF;
+  --light-blue: #D2E1FF;
+  --blue: #4C85FF;
+
+  --red-text: #D43F3F;
+  --light-red: #FFD7D7;
+  --red: #D43F3F;
+}
+
 button {
   box-sizing: border-box;
   padding-top: dpx(0.75);
   padding-bottom: dpx(0.75);
   padding-left: dpx(1);
   padding-right: dpx(1);
-  color: #3A79FF;
-  background-color: #D2E1FF;
+  color: var(--blue-text);
+  background-color: var(--light-blue);
   border-radius: 2px;
   border: none 0px transparent;
   font-size: dpx(0.75);
@@ -26,18 +36,18 @@ button {
 }
 
 button.light-blue {
-  color: #3A79FF;
-  background-color: #D2E1FF;
+  color: var(--blue-text);
+  background-color: var(--light-blue);
 }
 
 button.light-red {
-  color: #D43F3F;
-  background-color: #FFD7D7;
+  color: var(--red-text);
+  background-color: var(--light-red);
 }
 
 button.blue {
-  color: #FFFFFF;
-  background-color: #4C85FF;
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 button.gray {
@@ -54,5 +64,5 @@ button.play {
   border-radius: 50%;
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
   background-color: #FFFFFF; 
-  color: #3A79FF;
+  color: var(--blue-text);
 }
