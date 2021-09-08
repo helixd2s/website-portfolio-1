@@ -1,9 +1,9 @@
 .reading {
   box-sizing: border-box;
   width: 100%;
-  align-items: center;
+  //align-items: center;
   justify-content: flex-start;
-  justify-self: center;
+  //justify-self: center;
   flex-direction: column;
   display: flex;
   height: dpx(54.0625);
@@ -21,19 +21,22 @@
 
   .swiper {
     width: 100%;
-    box-sizing: border-box;
+    overflow: visible;
+    width: dpx(59.875);
+    height: dpx(24.625);
   
     .swiper-wrapper {
       width: 100%;
-      box-sizing: border-box;
   
       .swiper-slide {
         > * {
           box-sizing: border-box;
           border: 1px solid #D8E3FE;
           margin: auto;
-          width: dpx(59.875);
-          height: dpx(24.625);
+          width: 100%;
+          height: 100%;
+          //width: dpx(59.875);
+          //height: dpx(24.625);
   
           background-color: white;
           box-sizing: border-box;
@@ -109,12 +112,23 @@
       }
   
     }
+
+    .swiper-button-prev {
+      left: calc(0% - #{dpx(4.6875)});
+    }
+
+    .swiper-button-next {
+      right: calc(0% - #{dpx(4.6875)});
+    }
+
+    .swiper-pagination {
+      top: calc(100% + #{dpx(5.25)});
+      height: dpx(0.5);
+    }
   
   }
 
-  .swiper-pagination {
-    height: dpx(0.5);
-  }
+  
 
 }
 

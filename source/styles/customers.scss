@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: grid;
   width: 100%;
-  grid-template-columns: dpx(46.3125) 1fr;
+  grid-template-columns: auto 1fr;
   height: dpx(30);
   background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
 
@@ -12,11 +12,12 @@
   }
 
   .heading {
+    padding-top: dpx(6.875);
     box-sizing: border-box;
     width: 100%;
     align-items: flex-start;
-    justify-content: center;
-    justify-self: center;
+    //justify-content: center;
+    //justify-self: center;
     display: flex;
     flex-direction: column;
     padding-left: dpx(17.25);
@@ -24,12 +25,13 @@
     height: 100%;
 
     h1 {
+      font-weight: bold;
       font-size: dpx(2.25);
       line-height: dpx(2.8125);
     }
 
     p {
-      font-family: "Open Sans";
+      width: dpx(20.1875);
       font-size: dpx(0.75);
       line-height: dpx(1.4375);
     }
@@ -37,32 +39,29 @@
 
   
   .cards {
+    padding-top: dpx(6.875);
     box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
+    //align-items: center;
+    //justify-content: center;
+    //justify-self: center;
     display: flex;
     width: 100%;
     gap: dpx(4.875);
     
+    
 
     .swiper {
-      width: dpx(54.875);
+      margin-left: 0px;
+      width: dpx(26.4375);
       height: dpx(10.960625);
       overflow: visible;
 
       .swiper-wrapper {
         width: 100%;
         overflow: visible;
-    
-        
 
         .swiper-slide {
-          &.swiper-slide-next {
-            > * {
-              opacity: 0.6;
-            }
-          }
+          overflow: visible;
 
           > * {
             width: 100%;
@@ -127,11 +126,14 @@
         }
     
       }
+
+      .swiper-pagination {
+        top: calc(100% + #{dpx(5.25)});
+        height: dpx(0.5);
+      }
     
     }
 
-    .swiper-pagination {
-      height: dpx(0.5);
-    }
+    
   }
 }

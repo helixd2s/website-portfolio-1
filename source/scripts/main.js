@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCreative } from 'swiper';
 
 //
 import '../styles/main.scss'
@@ -26,12 +26,7 @@ const header = new Swiper('.header .swiper', {
   // If we need pagination
   pagination: {
     el: '.header .swiper-pagination',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.header .swiper-scrollbar',
-  },
+  }
 });
 
 
@@ -41,6 +36,7 @@ const reading = new Swiper('.reading .swiper', {
   direction: 'horizontal',
   loop: false,
   modules: [Navigation, Pagination],
+  spaceBetween: 512,
 
   navigation: {
     nextEl: ".reading .swiper-button-next",
@@ -63,28 +59,25 @@ const customers = new Swiper('.customers .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
-  modules: [Navigation, Pagination],
-  slidesPerView: 2,
+  modules: [Navigation, Pagination, EffectCreative],
+  slidesPerView: 1,
   spaceBetween: 64,
 
   effect: "creative",
   creativeEffect: {
     prev: {
+      opacity: 0,
       shadow: true,
       translate: [0, 0, -400],
     },
     next: {
-      translate: ["100%", 0, 0],
+      translate: ["calc(100% + 64px)", 0, 0],
+      opacity: 0.6
     },
   },
 
   // If we need pagination
   pagination: {
     el: '.customers .swiper-pagination',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.customers .swiper-scrollbar',
-  },
+  }
 });
