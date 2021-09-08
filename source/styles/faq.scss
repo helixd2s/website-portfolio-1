@@ -37,6 +37,8 @@
 
 
     .spoiler {
+      width: dpx(46.4375);
+      border-bottom: 1px solid #D8E3FE;
 
       input {
         display: none;
@@ -76,7 +78,41 @@
         }
       }
 
+
+      &[open] summary::before {
+        content: url("../images/marker-open.svg");
+      }
+
+      & summary::before {
+        content: url("../images/marker-close.svg");
+      }
+
+      summary {
+        cursor: pointer;
+        font-family: Quicksand;
+        box-sizing: border-box;
+        
+        padding: dpx(1.9);
+        font-size: dpx(1);
+        display: inline-block;
+
+        &::marker {
+          list-style-type: none;
+        }
+        
+        &::before {
+          box-sizing: border-box;
+          display: inline-block;
+          padding-right: 1.5rem !important;
+        }
+      }
+
+      &[open] .sided {
+        height: auto;
+      }
+
       .sided {
+        height: 0px;
         transition: height 1s;
 
         box-sizing: border-box;
@@ -94,6 +130,8 @@
         }
 
       }
+
+      
 
     }
   }
