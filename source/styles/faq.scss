@@ -1,0 +1,88 @@
+.faq {
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  height: dpx(60.25);
+  gap: dpx(4);
+
+  .heading {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      font-size: dpx(0.625);
+    }
+
+    h1 {
+      font-size: dpx(1.5);
+    }
+
+    h1, h6 {
+      margin: 0px;
+    }
+  }
+
+  .questions {
+    .line {
+      height: 0px;
+      width: dpx(46.4375);
+      border-bottom: 1px solid #D8E3FE;
+    }
+
+    details[open] {
+      summary {
+        list-style-image: url("../images/marker-open.svg");
+      
+        &::marker  {
+          //content: url("../images/marker-open.svg");
+        }
+
+      }
+    }
+
+    details {
+
+
+      summary {
+        font-family: Quicksand;
+        box-sizing: border-box;
+        
+        padding: dpx(1.9);
+        font-size: dpx(1);
+        cursor: pointer;
+
+        list-style-image: url("../images/marker-close.svg");
+
+        &::marker {
+          box-sizing: border-box;
+          display: inline-block;
+          padding: 1.5rem !important;
+          padding-right: 1.5rem !important;
+          //content: url("../images/marker-close.svg");
+        }
+      }
+    }
+
+    .sided {
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      display: flex;
+      padding-bottom: dpx(3);
+      
+      p {
+        margin: 0px;
+        display: inline-block;
+        width: dpx(24.4375);
+      }
+
+    }
+  }
+
+}
