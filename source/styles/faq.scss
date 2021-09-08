@@ -109,17 +109,19 @@
 
       &[open] .sided {
         height: auto;
+        display: grid;
       }
 
       .sided {
         height: 0px;
         transition: height 1s;
+        grid-template-columns: auto auto;
 
         box-sizing: border-box;
         align-items: center;
         justify-content: center;
         justify-self: center;
-        display: flex;
+        display: grid;
         padding-bottom: dpx(3);
         overflow: hidden;
         

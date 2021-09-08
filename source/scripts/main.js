@@ -81,3 +81,15 @@ const customers = new Swiper('.customers .swiper', {
     el: '.customers .swiper-pagination',
   }
 });
+
+
+let elements = document.querySelectorAll(".faq details");
+for (let el of elements) {
+  el.querySelector("summary").addEventListener("click", function () {
+    let parent = this.parentNode;
+    for (let el of elements) {
+      if (el != parent) { el.open = false; };
+      parent.open = parent.open ? false : true;
+    };
+  });
+}
