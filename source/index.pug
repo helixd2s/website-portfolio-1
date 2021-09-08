@@ -151,24 +151,35 @@ html
           h6="Customer help"
           h1="Frequently asked questions"
         .questions 
-          details
-            summary="Reque insolens in vel?"
-          .line
-          details
-            summary="Vis rebum error graecis ea, id sit postea accusamus?"
-          .line
-          details
-            summary="Lorem repudiandae ne nec?"
-            .sided
-              p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
-              button.gray-solid="Go to documentation"
-          .line
-          details
-            summary="Ad dicit numquam vel. Et eos iudico feugait percipitur?"
-          .line
-          details
-            summary="Sea no dico percipitur. Fierent constituam definitiones id eum?"
-          .line
-          
 
+          form(action="") 
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-1" value=1)
+              label(for="-radio-choice-1")="Reque insolens in vel?"
+              .sided
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-2" value=2)
+              label(for="-radio-choice-2")="Vis rebum error graecis ea, id sit postea accusamus?"
+              .sided
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-3" value=3 checked)
+              label(for="-radio-choice-3")="Lorem repudiandae ne nec?"
+              .sided
+                p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
+                button.gray-solid="Go to documentation"
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-4" value=4)
+              label(for="-radio-choice-4")="Ad dicit numquam vel. Et eos iudico feugait percipitur?"
+              .sided
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-5" value=5)
+              label(for="-radio-choice-5")="Reque insolens in vel?"
+              .sided
+            .spoiler 
+              input(type="radio" name="collapse" id="-radio-choice-6" value=6)
+              label(for="-radio-choice-6")="Sea no dico percipitur. Fierent constituam definitiones id eum?"
+              .sided
+
+    script 
+      
     script(src="scripts/main.js" defer async)
