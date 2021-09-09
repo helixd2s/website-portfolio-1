@@ -1,0 +1,68 @@
+.newsletter {
+  background-color: #FCFDFF;
+  height: dpx(20.75);
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+    //justify-self: center;
+    padding-left: dpx(17.25);
+
+    h2 {
+      font-size: dpx(1.125);
+      line-height: dpx(1.375);
+      margin: 0px;
+    }
+
+    p {
+      width: dpx(20.625);
+    }
+  }
+
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: center;
+    gap: dpx(0.875);
+
+    input { 
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      background-color: #EFEFF7;
+      height: dpx(3.6875);
+      width: dpx(17.4375);
+      border: none 0px transparent;
+      padding: dpx(1.3);
+      color: #7A85AD;
+      line-height: dpx(1);
+      font-size: dpx(0.8125);
+
+      &::placeholder {
+        color: #7A85AD;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      height: dpx(3.6875);
+      width: dpx(11.5);
+    }
+  }
+}

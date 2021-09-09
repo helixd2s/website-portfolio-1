@@ -20,7 +20,7 @@ html
           img(src="images/social/telegram.svg")
           img(src="images/social/twitter.svg")
           img(src="images/social/medium.svg")
-        .started 
+        .buttons 
           button.light-blue()="Get started"
       .header 
         .swiper
@@ -57,7 +57,7 @@ html
             button.blue 
               span="View video "
               img(src="images/white-play.svg")
-            button.gray="See features"
+            button.transparent-dark="See features"
         .image 
       .about 
         .heading 
@@ -152,27 +152,39 @@ html
           h1="Frequently asked questions"
         .questions 
 
-          form(action="") 
-            details.spoiler 
-              summary="Reque insolens in vel?"
-              .sided
-            details.spoiler 
-              summary="Vis rebum error graecis ea, id sit postea accusamus?"
-              .sided
-            details.spoiler 
-              summary="Lorem repudiandae ne nec?"
-              .sided
-                p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
-                button.gray-solid="Go to documentation"
-            details.spoiler 
-              summary="Ad dicit numquam vel. Et eos iudico feugait percipitur?"
-              .sided
-            details.spoiler 
-              summary="Reque insolens in vel?"
-              .sided
-            details.spoiler 
-              summary="Sea no dico percipitur. Fierent constituam definitiones id eum?"
-              .sided
+          details.spoiler 
+            summary="Reque insolens in vel?"
+            .sided
+          details.spoiler 
+            summary="Vis rebum error graecis ea, id sit postea accusamus?"
+            .sided
+          details.spoiler 
+            summary="Lorem repudiandae ne nec?"
+            .sided
+              p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
+              button.gray="Go to documentation"
+          details.spoiler 
+            summary="Ad dicit numquam vel. Et eos iudico feugait percipitur?"
+            .sided
+          details.spoiler 
+            summary="Sea no dico percipitur. Fierent constituam definitiones id eum?"
+            .sided
+      .started 
+        .heading 
+          h6="PLAN YOUR LIFE"
+          h1="Get started now"
+          p="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
+        .buttons
+          button.white="View pricing"
+          button.transparent-light="Read documentation"
+      .newsletter
+        .heading 
+          h2="Sign up for newsletter"
+          p="Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum."
+        form(action="")
+          input(type="text", placeholder="Email address") 
+          button.blue()="Save me"
+          
 
     script 
       
