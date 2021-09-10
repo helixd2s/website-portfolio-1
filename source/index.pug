@@ -5,28 +5,30 @@ html
     link(href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet")
   body
     
-    .container
-      .navbar 
-        .profile 
-          .circle
-            img(src="",alt="")
-        .menu 
-          a.active(href="#")="Home"
-          a(href="#")="Blog"
-          a(href="#")="Features"
-          a(href="#")="Documentation"
-        .social 
-          img(src="images/social/facebook.svg")
-          img(src="images/social/telegram.svg")
-          img(src="images/social/twitter.svg")
-          img(src="images/social/medium.svg")
-        .buttons 
-          button.light-blue()="Get started"
-      .header 
-        .swiper
-          .swiper-wrapper
-            .swiper-slide.main
-              h6="PLAN YOUR LIFE"
+    nav.navbar.row-vertical-center
+      .wrap.flex-row.row-vertical-center
+        .circle
+      .menu.flex-row.row-vertical-center
+        a.active(href="#")="Home"
+        a(href="#")="Blog"
+        a(href="#")="Features"
+        a(href="#")="Pricing"
+        a(href="#")="Documentation"
+      .wrap.flex-row.row-vertical-center
+      .social.flex-row.row-vertical-center
+        img(src="images/social/facebook.svg")
+        img(src="images/social/telegram.svg")
+        img(src="images/social/twitter.svg")
+        img(src="images/social/medium.svg")
+      .wrap.flex-row.row-vertical-center
+        button.light-blue="Get started"
+
+    header.header.flex-column.column-center.column-vertical-center
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            .main.page.flex-column.column-center
+              h5="PLAN YOUR LIFE"
               h1="Increase your "
                 b="productivity"
               p
@@ -35,156 +37,7 @@ html
                 | Et vel modus congue vituperata.
               button.play 
                 img(src="images/play.svg",alt="")
-          .swiper-pagination
-      .partners
-        img(src="images/partners/bitbucket.svg",alt="")
-        img(src="images/partners/applewatch.svg",alt="")
-        img(src="images/partners/facebook.svg",alt="")
-        img(src="images/partners/atlassian.svg",alt="")
-        img(src="images/partners/audi.svg",alt="")
-      .manage
-        .content
-          h6="DESKTOP AND MOBILE APP"
-          h1
-            b="Plan " 
-            span="and " 
-            b="manage" 
-          p
-            | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.
-            br
-            
-          .buttons 
-            button.blue 
-              span="View video "
-              img(src="images/white-play.svg")
-            button.transparent-dark="See features"
-        .image 
-      .about 
-        .heading 
-          h6="ABOUT US"
-          h2="Read about our app"
-        .features 
-          .column 
-            .circle 
-              img(src="images/about/home.svg")
-            h4="Overview"
-            p="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro."
-          .decoration
-          .column 
-            .circle 
-              img(src="images/about/files.svg")
-            h4="Files"
-            p="No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has."
-          .decoration
-          .column 
-            .circle 
-              img(src="images/about/message.svg")
-            h4="Meeting chats"
-            p="Vim ne tacimates neglegentur. Erat diceret omittam at est."
-          .decoration
-          .column 
-            .circle 
-              img(src="images/about/upload.svg")
-            h4="Save events"
-            p="Nisl idque mel ea, nominati voluptatum."
-        .choice
-          button.light-red="Read more"
-          .decoration
-          span="OR"
-          .decoration
-          button.light-blue="Get started"
-      .statistics 
-        .blue 
-          img(src="images/statistics/performance.svg",alt="")
-          h1="89%"
-          h3="Customers who have increased their productivity"
-        .white 
-          img(src="images/statistics/social.svg",alt="")
-          h1="3123"
-          h3="Users who have used our application"
-      .reading 
-        .heading 
-          h6="OUR RESOURCES"
-          h2="Start reading our blog"
-        .swiper
-          .swiper-button-prev
-          .swiper-wrapper
-            .swiper-slide
-              .main
-                .images
-                  .big(style="--bg-image: url(\"images/images/img1.png\");")
-                  .small(style="--bg-image: url(\"images/images/img2.jpg\");")
-                  .small(style="--bg-image: url(\"images/images/img3.jpg\");")
-                .content 
-                  h6="OUR RESOURCES"
-                  h1="How to start planning"
-                  p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."
-                  .buttons 
-                    button.light-blue="Read now"
-                    button.transparent="Add to your bookmarks"
-            .swiper-slide
-              .test
-          .swiper-button-next
-          .swiper-pagination
-      .customers
-        .heading 
-          h6="TESTIMONIALS"
-          h1="Customers's quotes"
-          p="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an."
-        .cards 
-          .swiper
-            .swiper-wrapper
-              .swiper-slide
-                .main
-                  .content 
-                    p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
-                  .avatar(style="--bg-image: url(\"images/customers/avatar.png\");")
-                    
-              .swiper-slide
-                .test
-                  .content 
-                    p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
-                  .avatar 
-            .swiper-pagination
-      .faq 
-        .heading 
-          h6="Customer help"
-          h1="Frequently asked questions"
-        .questions 
-
-          details.spoiler 
-            summary="Reque insolens in vel?"
-            .sided
-          details.spoiler 
-            summary="Vis rebum error graecis ea, id sit postea accusamus?"
-            .sided
-          details.spoiler 
-            summary="Lorem repudiandae ne nec?"
-            .sided
-              p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti."
-              button.gray="Go to documentation"
-          details.spoiler 
-            summary="Ad dicit numquam vel. Et eos iudico feugait percipitur?"
-            .sided
-          details.spoiler 
-            summary="Sea no dico percipitur. Fierent constituam definitiones id eum?"
-            .sided
-      .started 
-        .heading 
-          h6="PLAN YOUR LIFE"
-          h1="Get started now"
-          p="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata."
-        .buttons
-          button.white="View pricing"
-          button.transparent-light="Read documentation"
-      .newsletter
-        .heading 
-          h2="Sign up for newsletter"
-          p="Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum."
-        form(action="")
-          input(type="text", placeholder="Email address") 
-          button.blue()="Save me"
-          
+        .swiper-pagination
 
     script 
       

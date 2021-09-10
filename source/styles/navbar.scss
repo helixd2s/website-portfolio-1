@@ -1,59 +1,42 @@
-@import "lib/utils";
-
 .navbar {
-  padding-left: dpx(7.25);
-  padding-right: dpx(7.25);
   display: grid;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  width: 100%;
-  grid-template-columns: auto 1fr auto auto;
-  height: dpx(5);
-  box-sizing: border-box;
+  grid-template-columns: auto auto 1fr auto auto;
+  padding-right: 117px;
+  padding-left: 117px;
+  height: 80px;
+
+  .circle {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
 
   .menu {
-    box-sizing: border-box;
-    padding-right: dpx(2);
-    padding-left: dpx(4.5);
-    display: flex;
-    width: 100%;
-    gap: dpx(2.5);
-  
-    a.active {
-      color: #5E81FE;
-    }
+    margin-left: 72px;
+    gap: 42px;
 
+    a {
+      font-family: Quicksand;
+      font-size: 12px;
+      line-height: 15px;
+      color: #697CA6;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      opacity: 1;
+  
+      &.active {
+        color: #5E81FE;
+      }
+    }
   }
 
   .social {
-    box-sizing: border-box;
-    padding-right: dpx(2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    gap: dpx(2);
-
-    img {
-      
-    }
+    margin-right: 44px;
+    gap: 32px;
   }
 
-  .profile {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-
-    .circle {
-      box-sizing: border-box;
-      background-color: #5E81FE;
-      width: dpx(1.65);
-      height: dpx(1.65);
-      overflow: hidden;
-      border-radius: 50%;
-    }
-  }
+  
 }

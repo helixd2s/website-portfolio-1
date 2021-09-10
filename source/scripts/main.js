@@ -2,6 +2,7 @@ import Swiper, { Navigation, Pagination, EffectCreative } from 'swiper';
 
 //
 import '../styles/main.scss'
+import '../styles/custom.scss'
 
 // swiper bundle styles
 import 'swiper/css/bundle'
@@ -12,6 +13,15 @@ import 'swiper/css'
 // modules styles
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+
+//
+//import bootstrap from 'bootstrap'
+
+//
+//import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'
+//import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss'
+//import '../../node_modules/bootstrap/scss/bootstrap-utilities.scss'
+//import '../../node_modules/bootstrap/scss/bootstrap.scss'
 
 //
 Swiper.use([Navigation, Pagination]);

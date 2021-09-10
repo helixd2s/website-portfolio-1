@@ -1,85 +1,20 @@
-@import "lib/utils";
-@import "fonts";
-@import "navbar";
-@import "buttons";
-@import "header";
-@import "partners";
-@import "manage";
-@import "about";
-@import "statistics";
-@import "reading";
-@import "customers";
-@import "faq";
-@import "started";
-@import "newsletter";
 
+@use "fonts";
+@use "titles";
+@use "layouts";
+@use "buttons";
+@use "navbar";
+@use "details";
+@use "header";
 
 html, body {
-  --white: #FFFFFF;
-  --paragraph-color: #8D96BD;
-  --title-color: #3D4F9F;
-  --subtitle-color: #4074F8;
-  --text-color: #697CA6;
-
   padding: 0px;
   margin: 0px;
   border: none 0px transparent;
   box-sizing: border-box;
   font-family: Quicksand;
-  font-size: dpx(0.75);
-  line-height: dpx(1);
-  color: var(--text-color);
-  
-
-  a {
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--text-color);
-  }
-
-  b {
-    font-weight: bold;
-  }
-
-  p {
-    margin-top: dpx(0.8);
-    margin-bottom: dpx(0.8);
-    line-height: dpx(1.8);
-    font-family: Roboto;
-    font-size: dpx(1);
-    color: var(--paragraph-color);
-  }
-
-  h6 {
-    padding: 0;
-    margin-top: dpx(0.8);
-    margin-bottom: dpx(0.8);
-    font-weight: bold;
-    line-height: dpx(1.5);
-    font-size: dpx(0.625);
-    color: var(--title-color);
-  }
-
-  h1 {
-    padding: 0;
-    margin-top: dpx(0.8);
-    margin-bottom: dpx(0.8);
-    line-height: dpx(3);
-    font-size: dpx(2.253);
-    font-weight: normal;
-    color: var(--title-color);
-  }
-
-  h2 {
-    padding: 0;
-    margin-top: dpx(0.8);
-    margin-bottom: dpx(0.8);
-    line-height: dpx(3);
-    font-size: dpx(1.5);
-    font-weight: bold;
-    color: var(--title-color);
-  }
-
+  font-size: 12px;
+  line-height: 16px;
 
   html {
     
