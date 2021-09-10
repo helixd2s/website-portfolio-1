@@ -8,6 +8,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .flex-column {
@@ -15,12 +16,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .flex-row {
   width: 100%;
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
 }
 
 .column-left {

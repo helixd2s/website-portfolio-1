@@ -1,0 +1,23 @@
+input[type=text] { 
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: #EFEFF7;
+  height: 59px;
+  width: 279px;
+  border: none 0px transparent;
+  padding: 20.8px;
+  color: #7A85AD;
+  line-height: 16px;
+  font-size: 13px;
+
+  &::placeholder {
+    color: #7A85AD;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

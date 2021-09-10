@@ -1,0 +1,21 @@
+.swiper {
+  width: 100%;
+  overflow: visible !important;
+
+  .swiper-wrapper {
+    overflow: visible !important;
+  }
+
+  .swiper-button-prev {
+    left: calc(0% - 75px);
+  }
+
+  .swiper-button-next {
+    right: calc(0% - 75px);
+  }
+
+  .swiper-pagination {
+    top: calc(100% + 84px);
+    height: 8px;
+  }
+}

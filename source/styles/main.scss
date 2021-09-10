@@ -11,6 +11,14 @@
 @use "plan";
 @use "features";
 @use "stats";
+@use "blog";
+@use "swiper";
+@use "quotes";
+@use "faq";
+@use "started";
+@use "inputs";
+@use "newsletter";
+@use "footer";
 
 html, body {
   padding: 0px;
@@ -26,6 +34,7 @@ html, body {
   }
   
   body {
+    overflow-x: hidden;
     min-height: 100vh;
     --dp-scale: 1rem;
 

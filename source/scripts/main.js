@@ -27,7 +27,7 @@ import 'swiper/css/pagination'
 Swiper.use([Navigation, Pagination]);
 
 //
-const header = new Swiper('.header .swiper', {
+const hero = new Swiper('.hero .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -35,13 +35,13 @@ const header = new Swiper('.header .swiper', {
 
   // If we need pagination
   pagination: {
-    el: '.header .swiper-pagination',
+    el: '.hero .swiper-pagination',
   }
 });
 
 
 //
-const reading = new Swiper('.reading .swiper', {
+const blog = new Swiper('.blog .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -49,23 +49,23 @@ const reading = new Swiper('.reading .swiper', {
   spaceBetween: 512,
 
   navigation: {
-    nextEl: ".reading .swiper-button-next",
-    prevEl: ".reading .swiper-button-prev",
+    nextEl: ".blog .swiper-button-next",
+    prevEl: ".blog .swiper-button-prev",
   },
 
   // If we need pagination
   pagination: {
-    el: '.reading .swiper-pagination',
+    el: '.blog .swiper-pagination',
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.reading .swiper-scrollbar',
+    el: '.blog .swiper-scrollbar',
   },
 });
 
 //
-const customers = new Swiper('.customers .swiper', {
+const quotes = new Swiper('.quotes .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -88,7 +88,7 @@ const customers = new Swiper('.customers .swiper', {
 
   // If we need pagination
   pagination: {
-    el: '.customers .swiper-pagination',
+    el: '.quotes .swiper-pagination',
   }
 });
 

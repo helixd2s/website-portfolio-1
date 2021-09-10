@@ -51,14 +51,24 @@
   .choice {
     box-sizing: border-box;
     width: 100%;
-    padding-left: 552px;
-    padding-right: 552px;
+    padding-left: 340px;
+    padding-right: 340px;
     display: grid;
     align-items: center;
     justify-content: center;
     justify-self: center;
     text-align: center;
-    grid-template-columns: 140px 4% 48px 4% 140px;
+    grid-template-columns: 6fr 140px 1fr 48px 1fr 140px 6fr;
+
+    &:after {
+      content: "";
+      display: block;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+    }
 
     .decoration {
       box-sizing: border-box;

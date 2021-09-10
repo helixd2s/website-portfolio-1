@@ -1,0 +1,29 @@
+.faq {
+  height: 964px;
+  gap: 68px;
+  padding-top: 176px;
+
+  summary {
+    text-align: left;
+  }
+
+  .line {
+    border-bottom: 1px solid #D8E3FE;
+    width: 743px;
+    height: 1px;
+  }
+
+  .questions {
+    padding-left: 372px;
+    
+    .content {
+      gap: 62px;
+    }
+
+    p {
+      margin-left: 48px;
+      margin-top: 16px;
+      width: 391px;
+    }
+  }
+}
