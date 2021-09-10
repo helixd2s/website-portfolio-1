@@ -1,5 +1,7 @@
 .header {
 
+  background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+
   .swiper {
     height: 570px;
     width: 100%;
@@ -18,7 +20,7 @@
     &.main {
       
       background-image: url("../images/header.svg");
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       background-origin: border-box;
       background-clip: border-box;
