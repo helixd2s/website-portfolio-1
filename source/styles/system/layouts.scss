@@ -48,6 +48,11 @@
   vertical-align: middle;
 }
 
+.column-vertical-top {
+  justify-content: flex-start;
+  vertical-align: top;
+}
+
 .row-left {
   text-align: left;
   justify-content: flex-start;
