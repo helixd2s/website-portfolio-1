@@ -14,7 +14,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .flex-row {
@@ -23,14 +23,29 @@
   flex-direction: row;
 }
 
+.column-left {
+  text-align: left;
+  align-items: flex-start;
+}
+
 .column-center {
   text-align: center;
   align-items: center;
 }
 
+.column-right {
+  text-align: right;
+  align-items: flex-end;
+}
+
 .column-vertical-center {
   justify-content: center;
   vertical-align: middle;
+}
+
+.row-left {
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .row-center {
@@ -43,6 +58,16 @@
   vertical-align: middle;
 }
 
+.space-between {
+  justify-content: space-between;
+  display: grid;
+}
+
 * {
   box-sizing: border-box;
 }
+
+.text-align-left {
+  text-align: left;
+}
+

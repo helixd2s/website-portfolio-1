@@ -23,7 +23,7 @@ html
       .wrap.flex-row.row-vertical-center
         button.light-blue="Get started"
 
-    header.header.flex-column.column-center.column-vertical-center
+    header.hero.flex-column.column-center.column-vertical-center
       .swiper
         .swiper-wrapper
           .swiper-slide
@@ -38,6 +38,69 @@ html
               button.play 
                 img(src="images/play.svg",alt="")
         .swiper-pagination
+
+    .customers.space-between.row-vertical-center
+      img(src="images/customers/bitbucket.svg",alt="")
+      img(src="images/customers/applewatch.svg",alt="")
+      img(src="images/customers/facebook.svg",alt="")
+      img(src="images/customers/atlassian.svg",alt="")
+      img(src="images/customers/audi.svg",alt="")
+
+    .plan.two-columns 
+      .wrap.content.flex-column.column-left.column-vertical-center.text-align-left
+        h5="DESKTOP AND MOBILE APP"
+        h2="Plan and manage"
+        p="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat."
+        .flex-row.row-left.text-align-left
+          button.blue 
+            span="View video "
+            img(src="images/white-play.svg")
+          button.transparent-dark="See features"
+      .wrap 
+    .features.flex-column.column-center.column-vertical-center
+      .flex-column.column-center.column-vertical-center
+        h5="ABOUT US"
+        h3="Read about our app"
+      .flex-column.column-center.column-vertical-center
+        .grid-4-decorated
+          .column.flex-column.column-center.column-vertical-center
+            .circle 
+              img(src="images/about/home.svg")
+            h4="Overview"
+            p.sans.smaller="Brute laoreet efficiendi id his, ea illum nonumes luptatum pro."
+          .decoration
+          .column.flex-column.column-center.column-vertical-center
+            .circle 
+              img(src="images/about/files.svg")
+            h4="Files"
+            p.sans.smaller="No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has."
+          .decoration
+          .column.flex-column.column-center.column-vertical-center
+            .circle 
+              img(src="images/about/message.svg")
+            h4="Meeting chats"
+            p.sans.smaller="Vim ne tacimates neglegentur. Erat diceret omittam at est."
+          .decoration
+          .column.flex-column.column-center.column-vertical-center
+            .circle 
+              img(src="images/about/upload.svg")
+            h4="Save events"
+            p.sans.smaller="Nisl idque mel ea, nominati voluptatum."
+      .choice
+        button.light-red="Read more"
+        .decoration
+        span="OR"
+        .decoration
+        button.light-blue="Get started"
+    .stats.two-columns 
+      .wrap.column-right.blue
+        img(src="images/statistics/performance.svg",alt="")
+        h1="89%"
+        h4="Customers who have increased their productivity"
+      .wrap.column-left.light-blue
+        img(src="images/statistics/social.svg",alt="")
+        h1="3123"
+        h4="Users who have used our application"
 
     script 
       

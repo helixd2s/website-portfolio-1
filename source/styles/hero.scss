@@ -1,0 +1,35 @@
+.hero {
+
+  background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+
+  .swiper {
+    height: 570px;
+    width: 100%;
+  }
+
+  .page {
+    height: 100%;
+    width: 100%;
+    padding-top: 92px;
+    box-sizing: border-box;
+
+    p {
+      width: 502px;
+    }
+
+    &.main {
+      
+      background-image: url("../images/header.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+      background-clip: border-box;
+      background-position: center center;
+      background-attachment: local;
+
+    }
+
+    
+  }
+  
+}

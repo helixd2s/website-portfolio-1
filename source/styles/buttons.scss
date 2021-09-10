@@ -1,6 +1,6 @@
 button {
   color: rgba(73, 82, 116, 0.4);
-  border: solid 1px rgba(73, 82, 116, 0.4);
+  border: solid 1px rgba(73, 82, 116, 0.3);
   background-color: transparent;
   
   padding-top: 13px;
@@ -27,6 +27,7 @@ button {
   font-weight: bold;
   overflow: hidden;
   margin: 0;
+  span { font-size: 13px; line-height: 16px; };
 }
 
 button.light-blue {
@@ -45,11 +46,19 @@ button.blue {
   color: white;
   border: none 0px transparent;
   background-color: #4C85FF;
+  span { color: white; opacity: 1; };
+  img { margin-left: 6px; };
+}
+
+button.transparent {
+  color: rgba(73, 82, 116, 0.4);
+  border: none 0px transparent;
+  background-color: transparent;
 }
 
 button.transparent-dark {
   color: rgba(73, 82, 116, 0.4);
-  border: solid 1px rgba(73, 82, 116, 0.4);
+  border: solid 1px rgba(73, 82, 116, 0.3);
   background-color: transparent;
 }
 
