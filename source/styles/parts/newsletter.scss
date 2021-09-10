@@ -2,7 +2,7 @@
   height: 332px;
 
   .content {
-    padding-left: 276px;
+    float: left;
 
     h4 {
       font-weight: bold;
@@ -11,5 +11,9 @@
     p {
       width: 330px;
     }
+  }
+
+  .submit {
+    float: right;
   }
 }

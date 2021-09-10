@@ -1,0 +1,20 @@
+.plan {
+  height: 776px;
+  background-color: #F5F8FF;
+
+  .content {
+    p {
+      width: 413px;
+    }
+  }
+
+  & {
+    --image-width: 854px;
+    --image-height: 736px;
+    background-image: url("../images/devices.svg");
+    background-repeat: no-repeat;
+    background-position-x: calc(50% + 300px);
+    background-position-y: calc(0% + 120px);
+  }
+
+}

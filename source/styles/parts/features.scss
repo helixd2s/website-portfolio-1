@@ -1,13 +1,15 @@
 .features {
   height: 885px;
   gap: 92px;
+  width: 100%;
 
   .grid-4-decorated {
     display: grid;
-    width: 100%;
     grid-template-columns: 140px 1fr 140px 1fr 140px 1fr 140px;
     padding-left: 340px;
     padding-right: 340px;
+    box-sizing: border-box;
+    margin: auto 0;
     
 
     align-items: center;
@@ -15,21 +17,29 @@
     justify-self: center;
     text-align: center;
 
+    .decoration {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      text-align: center;
+      padding: 20px;
+
+      &:after {
+        content: "";
+        display: block;
+        border-bottom: solid 1px #DAE4FE;
+        height: 1px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
     .column {
       gap: 32px;
-    
-      .decoration {
-        box-sizing: border-box;
-        padding: 20px;
-
-        &:after {
-          content: "";
-          display: block;
-          border-bottom: solid 1px #DAE4FE;
-          height: 1px;
-          width: 100%;
-        }
-      }
 
       .circle {
         width: 69px;
@@ -58,7 +68,7 @@
     justify-content: center;
     justify-self: center;
     text-align: center;
-    grid-template-columns: 6fr 140px 1fr 48px 1fr 140px 6fr;
+    grid-template-columns: 32fr 140px 1fr 48px 1fr 140px 32fr;
 
     &:after {
       content: "";

@@ -11,8 +11,11 @@
   box-sizing: border-box;
 }
 
-.flex-column {
+.wide {
   width: 100%;
+}
+
+.flex-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -20,7 +23,6 @@
 }
 
 .flex-row {
-  width: 100%;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
@@ -56,6 +58,11 @@
   justify-content: center;
 }
 
+.row-right {
+  text-align: right;
+  justify-content: flex-end;
+}
+
 .row-vertical-center {
   align-items: center;
   vertical-align: middle;
@@ -63,7 +70,6 @@
 
 .space-between {
   justify-content: space-between;
-  display: grid;
 }
 
 * {
@@ -74,3 +80,11 @@
   text-align: left;
 }
 
+.padding-large {
+  padding-left: 276px;
+  padding-right: 276px;
+}
+
+.width-1440 {
+  width: 1440px;
+}
