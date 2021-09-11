@@ -1,24 +1,24 @@
-.wide.blog.flex-column.column-center
+.wide.blog.flex-column.column-center(x-style="height: 865px; padding-top: 104px; gap: 92px; background-color: #F5F8FF;")
   .wide.flex-column.column-center
     h5="OUR RESOURCES"
     h3="Read about our app"
   .wide.flex-column.column-center
-    .swiper
+    .swiper(x-style="width: 958px; height: 394px;")
       .swiper-wrapper
         .swiper-slide
-          .main
+          .wrap.card.main.row-center.row-vertical-center.two-column(x-style="padding: 64px 36px 64px 36px;")
             .images
-              .big(style="--bg-image: url(\"images/images/img1.png\");")
-              .small(style="--bg-image: url(\"images/images/img2.jpg\");")
-              .small(style="--bg-image: url(\"images/images/img3.jpg\");")
+              div(style="--bg-image: url(\"images/images/img1.png\");" x-style=" grid-column: 1 / 3; grid-row: 1 / 3;")
+              div(style="--bg-image: url(\"images/images/img2.jpg\");" x-style="")
+              div(style="--bg-image: url(\"images/images/img3.jpg\");" x-style="")
             .content.flex-column.column-left.column-vertical-center
               h2="How to start planning"
               p="Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."
-              .flex-row(style="gap: 8px;")
+              .flex-row(x-style="gap: 8px;")
                 button.light-blue="Read now"
                 button.transparent="Add to your bookmarks"
         .swiper-slide
-          .test 
+          .wrap.card.test 
       .swiper-button-prev
       .swiper-button-next
       .swiper-pagination
