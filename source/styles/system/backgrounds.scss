@@ -1,0 +1,51 @@
+.bg-contain-border-box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  background-position: center center;
+  background-attachment: local;
+  background-image: var(--bg-image);
+}
+
+.bg-contain-content-box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: center center;
+  background-attachment: local;
+  background-image: var(--bg-image);
+}
+
+.bg-cover-border-box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  background-position: center center;
+  background-attachment: local;
+  background-image: var(--bg-image);
+}
+
+.bg-cover-content-box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: center center;
+  background-attachment: local;
+  background-image: var(--bg-image);
+}
+
+.bg-blue {
+  color: white;
+  background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+  p, h1, h2, h3, h4, h5, h6 { color: white; opacity: 1; }
+}
+
+.bg-light-blue {
+  color: #5E80FF;
+  background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+  p, h1, h2, h3, h4, h5, h6 { color: #5E80FF; opacity: 1; };
+}

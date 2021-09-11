@@ -1,7 +1,7 @@
-.wide.newsletter.padding-large.flex-row.space-between.row-vertical-center
-  .content.flex-column.column-left.column-vertical-center
-    h4="Sign up for newsletter"
-    p="Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum."
-  .submit.flex-row.row-right.row-vertical-center(style="gap: 14px;")
+.wide.newsletter.padding-large.flex-row.space-between.row-vertical-center(x-style="height: 332px;")
+  .content.flex-column.column-left.column-vertical-center(x-style="float: left;")
+    h4(x-style="font-weight: bold;")="Sign up for newsletter"
+    p(x-style="width: 330px;")="Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum."
+  .submit.flex-row.row-right.row-vertical-center(x-style="gap: 14px; float: right;")
     input(type="text",placeholder="Email address")
     button.blue(style="width:184px;height:59px;")="Save me"
