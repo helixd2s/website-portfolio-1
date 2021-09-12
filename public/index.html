@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <script src="scripts/main.js"></script>
   <script defer src="scripts/main.js"></script></head>
   <body>
     <div class="container">
@@ -17,14 +19,14 @@
           <button class="light-blue">Get started</button>
         </div>
       </nav>
-      <header class="wide hero flex-column column-center column-vertical-center">
-        <div class="swiper">
+      <header class="wide hero flex-column column-center column-vertical-center" x-style="background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);">
+        <div class="swiper" x-style="height: 570px; width: 100%;">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="main page flex-column column-center">
+              <div class="main wrap page flex-column column-center bg-contain-border-box" style="--bg-image: url(&quot;images/header.svg&quot;);" x-style="padding-top: 92px;">
                 <h5>PLAN YOUR LIFE</h5>
                 <h1>Increase your <b>productivity</b></h1>
-                <p>
+                <p x-style="width: 502px;">
                   Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
                   Usu atqui laudem an, insolens gubergren similique est cu.
                   Et vel modus congue vituperata.
@@ -36,12 +38,12 @@
           <div class="swiper-pagination"></div>
         </div>
       </header>
-      <div class="wide customers padding-large flex-row space-between row-vertical-center"><img src="images/customers/bitbucket.svg" alt=""><img src="images/customers/applewatch.svg" alt=""><img src="images/customers/facebook.svg" alt=""><img src="images/customers/atlassian.svg" alt=""><img src="images/customers/audi.svg" alt=""></div>
-      <div class="wide padding-large plan two-columns"> 
+      <div class="wide customers padding-large flex-row space-between row-vertical-center" x-style="grid-template-columns: repeat(5, auto); height: 146px;"><img src="images/customers/bitbucket.svg" alt=""><img src="images/customers/applewatch.svg" alt=""><img src="images/customers/facebook.svg" alt=""><img src="images/customers/atlassian.svg" alt=""><img src="images/customers/audi.svg" alt=""></div>
+      <div class="wide plan padding-large two-columns" x-style="height: 776px; background-color: #F5F8FF;">
         <div class="wrap content flex-column column-left column-vertical-center text-align-left">
           <h5>DESKTOP AND MOBILE APP</h5>
           <h2>Plan and manage</h2>
-          <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
+          <p x-style="width: 413px;">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
           <div class="flex-row row-left text-align-left">
             <button class="blue"> <span>View video </span><img src="images/white-play.svg"></button>
             <button class="transparent-dark">See features</button>
@@ -88,35 +90,35 @@
           <button class="light-blue">Get started</button>
         </div>
       </div>
-      <div class="wide stats two-columns"> 
-        <div class="wrap column-right blue"><img src="images/statistics/performance.svg" alt="">
+      <div class="wide stats two-columns" x-style="height: 343px;">
+        <div class="wrap column-right bg-blue" x-style="padding: 66px 90px 66px 90px; gap: 22px;"><img src="images/statistics/performance.svg" alt="">
           <h1>89%</h1>
-          <h4>Customers who have increased their productivity</h4>
+          <h4 x-style="width: 260px;">Customers who have increased their productivity</h4>
         </div>
-        <div class="wrap column-left light-blue"><img src="images/statistics/social.svg" alt="">
+        <div class="wrap column-left bg-light-blue" x-style="padding: 66px 90px 66px 90px; gap: 22px;"><img src="images/statistics/social.svg" alt="">
           <h1>3123</h1>
-          <h4>Users who have used our application</h4>
+          <h4 x-style="width: 260px;">Users who have used our application</h4>
         </div>
       </div>
-      <div class="wide blog flex-column column-center">
+      <div class="wide blog flex-column column-center" x-style="height: 865px; padding-top: 104px; gap: 92px; background-color: #F5F8FF;">
         <div class="wide flex-column column-center">
           <h5>OUR RESOURCES</h5>
           <h3>Read about our app</h3>
         </div>
         <div class="wide flex-column column-center">
-          <div class="swiper">
+          <div class="swiper" x-style="width: 958px; height: 394px;">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="main">
+                <div class="wrap card main row-center row-vertical-center two-column" x-style="padding: 64px 36px 64px 36px;">
                   <div class="images">
-                    <div class="big" style="--bg-image: url(&quot;images/images/img1.png&quot;);"></div>
-                    <div class="small" style="--bg-image: url(&quot;images/images/img2.jpg&quot;);"></div>
-                    <div class="small" style="--bg-image: url(&quot;images/images/img3.jpg&quot;);"></div>
+                    <div style="--bg-image: url(&quot;images/images/img1.png&quot;);" x-style=" grid-column: 1 / 3; grid-row: 1 / 3;"></div>
+                    <div style="--bg-image: url(&quot;images/images/img2.jpg&quot;);" x-style=""></div>
+                    <div style="--bg-image: url(&quot;images/images/img3.jpg&quot;);" x-style=""></div>
                   </div>
                   <div class="content flex-column column-left column-vertical-center">
                     <h2>How to start planning</h2>
                     <p>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</p>
-                    <div class="flex-row" style="gap: 8px;">
+                    <div class="flex-row" x-style="gap: 8px;">
                       <button class="light-blue">Read now</button>
                       <button class="transparent">Add to your bookmarks</button>
                     </div>
@@ -124,7 +126,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="test"> </div>
+                <div class="wrap card test"> </div>
               </div>
             </div>
             <div class="swiper-button-prev"></div>
@@ -133,27 +135,27 @@
           </div>
         </div>
       </div>
-      <div class="wide quotes two-columns">
-        <div class="content wrap flex-column column-center column-vertical-center">
+      <div class="wide quotes two-columns padding-large" x-style="height: 479px; background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);">
+        <div class="content wrap flex-column column-left" x-style="padding-top: 146px;">
           <h5>TESTIMONIALS</h5>
           <h2>Customers's quotes</h2>
-          <p class="sans small">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+          <p class="sans small" x-style="width: 323px;">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
         </div>
-        <div class="cards wrap flex-column column-center">
-          <div class="swiper">
+        <div class="cards wrap flex-column column-right" x-style="gap: 78px; padding-top: 110px;">
+          <div class="swiper" x-style="width: 423px; height: 175.37px;">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="main">
-                  <div class="content"> 
-                    <p class="small">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <div class="wrap card main flex-column">
+                  <div class="content" x-style="padding: 41px 69px 41px 69px;">
+                    <p class="small" x-style="width: 323px;">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
                   </div>
                   <div class="avatar" style="--bg-image: url(&quot;images/author/avatar.png&quot;);"></div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="test">
-                  <div class="content"> 
-                    <p class="small">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <div class="wrap card test flex-column">
+                  <div class="content" x-style="padding: 41px 69px 41px 69px;">
+                    <p class="small" x-style="width: 323px;">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
                   </div>
                   <div class="avatar"> </div>
                 </div>
@@ -163,12 +165,12 @@
           </div>
         </div>
       </div>
-      <div class="wide faq flex-column column-center">
+      <div class="wide faq flex-column column-center" x-style="height: 964px; gap: 68px; padding-top: 176px;">
         <div class="wide flex-column column-center column-vertical-center">
           <h5>Customer help</h5>
           <h3>Frequently asked questions</h3>
         </div>
-        <div class="wide questions flex-column column-center column-vertical-center">
+        <div class="wide questions flex-column column-center column-vertical-center" x-style="gap: 28px;">
           <details class="spoiler"> 
             <summary>Reque insolens in vel?</summary>
             <div class="content flex-row row-left row-vertical-center"></div>
@@ -182,7 +184,7 @@
           <details class="spoiler"> 
             <summary>Lorem repudiandae ne nec?</summary>
             <div class="content flex-row row-left row-vertical-center">
-              <p class="small">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <p class="small" x-style="margin-left: 48px; margin-top: 16px; width: 391px;">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
               <button class="gray">Go to documentation</button>
             </div>
           </details>
@@ -199,29 +201,29 @@
           <div class="line"></div>
         </div>
       </div>
-      <div class="wide started flex-column column-center column-vertical-center">
+      <div class="wide bg-blue started flex-column column-center column-vertical-center" x-style="height: 447px; gap: 48px;">
         <div class="flex-column column-center column-vertical-center">
           <h5>PLAN YOUR LIFE</h5>
           <h1>Get started now</h1>
-          <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+          <p x-style="width: 712px;">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
         </div>
         <div class="flex-row row-center row-vertical-center">
           <button class="white">View pricing</button>
           <button class="transparent-light">Read documentation</button>
         </div>
       </div>
-      <div class="wide newsletter padding-large flex-row space-between row-vertical-center">
-        <div class="content flex-column column-left column-vertical-center">
-          <h4>Sign up for newsletter</h4>
-          <p>Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+      <div class="wide newsletter padding-large flex-row space-between row-vertical-center" x-style="height: 332px;">
+        <div class="content flex-column column-left column-vertical-center" x-style="float: left;">
+          <h4 x-style="font-weight: bold;">Sign up for newsletter</h4>
+          <p x-style="width: 330px;">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
         </div>
-        <div class="submit flex-row row-right row-vertical-center" style="gap: 14px;">
+        <div class="submit flex-row row-right row-vertical-center" x-style="gap: 14px; float: right;">
           <input type="text" placeholder="Email address">
           <button class="blue" style="width:184px;height:59px;">Save me</button>
         </div>
       </div>
       <div class="wide footer flex-column column-left column-vertical-center">
-        <div class="wide navbar row-vertical-center">
+        <nav class="wide navbar row-vertical-center">
           <div class="wrap flex-row row-vertical-center">
             <div class="circle"></div>
           </div>
@@ -231,13 +233,12 @@
           <div class="wrap flex-row row-vertical-center">
             <button class="light-blue">Get started</button>
           </div>
-        </div>
-        <div class="wide copyright flex-row row-vertical-center">
+        </nav>
+        <div class="wide copyright flex-row row-vertical-center" x-style="padding-left: calc(8.125% + 100px); padding-bottom: 93px; opacity: 0.6;">
           <p class="small">Copyright © 2018 by Random site</p>
         </div>
       </div>
     </div>
-    <script> </script>
-    <script src="scripts/main.js" defer async></script>
+    <script></script>
   </body>
 </html>
