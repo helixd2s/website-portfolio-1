@@ -10,6 +10,20 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset',
+        generator: {  //If emitting file, the file path is
+          filename: 'fonts/[name][ext][query]'
+        }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {  //If emitting file, the file path is
+          filename: 'images/[name][ext][query]'
+        }
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -36,7 +50,9 @@ module.exports = {
   },
   entry: './source/scripts/main.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    
+    publicPath: path.resolve(__dirname, './') + "/",
+    path: path.resolve(__dirname, './') + "/",
     filename: 'scripts/main.js'
   },
   plugins: [
