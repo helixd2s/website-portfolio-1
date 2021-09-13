@@ -1,9 +1,19 @@
-let requestAnimationFrameAsync = ()=>{
-  return new Promise((resolve, reject)=>{
-    requestAnimationFrame((...args)=>{
-      resolve(...args);
-    });
-  });
+async function* asyncAnimationFrame () {
+  const h = {}
+  h.promise = new Promise(r => h.resolve = r)
+  h.flipFrame = () => {
+    h.resolve()
+    h.promise = new Promise(r => h.resolve = r)
+  }
+  try {
+    while (true) {
+      h.idAF = requestAnimationFrame(h.flipFrame)
+      yield await h.promise
+    }
+  } finally {
+    h.resolve()
+    cancelAnimationFrame(h.idAF)
+  }
 };
 
 let observations = [];
@@ -11,12 +21,14 @@ let observation = null;
 
 let runObservation = async() => {
   let hasListeners = false;
+  let flamer = asyncAnimationFrame();
 
   do {
     observations.forEach((observed)=>{
       if (observed.listeners.length > 0) {
         hasListeners = true;
         let computedStyle = getComputedStyle(observed.element, observed.pseudo);
+        observed.computed = computedStyle;
         observed.entries.forEach((entry)=>{
           entry.computed = computedStyle;
           entry.value = computedStyle.getPropertyValue(entry.entry); 
@@ -25,18 +37,19 @@ let runObservation = async() => {
         });
       };
     });
-    await requestAnimationFrameAsync();
+    await flamer.next();
   } while (observations.length > 0 && hasListeners);
 
   return true;
 };
 
-class ComputedStyleObserve {
-  constructor(element, pseudo, entries) {
+class ComputedStyleObservation {
+  constructor(element, pseudo, entries, computed) {
     this.element = element;
     this.entries = entries;
     this.pseudo = pseudo;
     this.listeners = [];
+    this.computed = computed;
   }
 
   addListener(cb) {
@@ -49,7 +62,7 @@ class ComputedStyleObserve {
       this.listeners.splice(index, 1);
     }
   }
-}
+};
 
 class ComputedStyleEntry {
   constructor(entry, value, oldValue, computed) {
@@ -64,10 +77,10 @@ class ComputedStyleEntry {
 class ComputedStyleObserver {
   constructor(element, pseudo, entries = []) {
     let computedStyle = getComputedStyle(element, pseudo);
-    observations.push(this.observed = new ComputedStyleObserve(element, pseudo, entries.map((entry)=>{
+    observations.push(this.observed = new ComputedStyleObservation(element, pseudo, entries.map((entry)=>{
       let value = computedStyle.getPropertyValue(entry);
       return new ComputedStyleEntry(entry, value, value, computedStyle);
-    })));
+    }), computedStyle));
   }
 
   addListener(cb) {
@@ -78,6 +91,6 @@ class ComputedStyleObserver {
   removeListener(cb) {
     this.observed.removeListener(cb);
   }
-}
+};
 
 export default { ComputedStyleObserver };

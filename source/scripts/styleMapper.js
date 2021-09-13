@@ -30,76 +30,32 @@ function isElement(o){
 }
 
 let propMap = {
-  "--content-box-width": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let width = computed.getPropertyValue("width").match(/\d+/);
+  "--content-box-width": (element, computed)=>{
+    let width = element.clientWidth;
     let paddingLeft = computed.getPropertyValue("padding-left").match(/\d+/);
     let paddingRight = computed.getPropertyValue("padding-right").match(/\d+/);
-    let borderLeftWidth = computed.getPropertyValue("border-left-width").match(/\d+/);
-    let borderRightWidth = computed.getPropertyValue("border-right-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(width); };
-    if (boxSizing == "padding-box") { return makePixel(width - paddingLeft - paddingRight); };
-    if (boxSizing == "border-box") { return makePixel(width - paddingLeft - paddingRight - borderLeftWidth - borderRightWidth); };
-    return makePixel(width);
+    return makePixel(width - paddingLeft - paddingRight);
   },
-  "--content-box-height": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let height = computed.getPropertyValue("height").match(/\d+/);
+  "--content-box-height": (element, computed)=>{
+    let height = element.clientHeight;
     let paddingTop = computed.getPropertyValue("padding-top").match(/\d+/);
     let paddingBottom = computed.getPropertyValue("padding-bottom").match(/\d+/);
-    let borderTopWidth = computed.getPropertyValue("border-top-width").match(/\d+/);
-    let borderBottomWidth = computed.getPropertyValue("border-bottom-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(height); };
-    if (boxSizing == "padding-box") { return makePixel(height - paddingTop - paddingBottom); };
-    if (boxSizing == "border-box") { return makePixel(height - paddingTop - paddingBottom - borderTopWidth - borderBottomWidth); };
+    return makePixel(height - paddingTop - paddingBottom);
+  },
+  "--border-box-width": (element, computed)=>{
+    let width = element.offsetWidth;
+    return makePixel(width);
+  },
+  "--border-box-height": (element, computed)=>{
+    let height = element.offsetHeight;
     return makePixel(height);
   },
-  "--border-box-width": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let width = computed.getPropertyValue("width").match(/\d+/);
-    let paddingLeft = computed.getPropertyValue("padding-left").match(/\d+/);
-    let paddingRight = computed.getPropertyValue("padding-right").match(/\d+/);
-    let borderLeftWidth = computed.getPropertyValue("border-left-width").match(/\d+/);
-    let borderRightWidth = computed.getPropertyValue("border-right-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(width + borderLeftWidth + borderRightWidth + paddingLeft + paddingRight); };
-    if (boxSizing == "padding-box") { return makePixel(width + borderLeftWidth + borderRightWidth); };
-    if (boxSizing == "border-box") { return makePixel(width); };
+  "--padding-box-width": (element, computed)=>{
+    let width = element.clientWidth;
     return makePixel(width);
   },
-  "--border-box-height": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let height = computed.getPropertyValue("height").match(/\d+/);
-    let paddingTop = computed.getPropertyValue("padding-top").match(/\d+/);
-    let paddingBottom = computed.getPropertyValue("padding-bottom").match(/\d+/);
-    let borderTopWidth = computed.getPropertyValue("border-top-width").match(/\d+/);
-    let borderBottomWidth = computed.getPropertyValue("border-bottom-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(height + paddingTop + paddingBottom + borderTopWidth + borderBottomWidth); };
-    if (boxSizing == "padding-box") { return makePixel(height + borderTopWidth + borderBottomWidth); };
-    if (boxSizing == "border-box") { return makePixel(height); };
-    return makePixel(height);
-  },
-  "--padding-box-width": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let width = computed.getPropertyValue("width").match(/\d+/);
-    let paddingLeft = computed.getPropertyValue("padding-left").match(/\d+/);
-    let paddingRight = computed.getPropertyValue("padding-right").match(/\d+/);
-    let borderLeftWidth = computed.getPropertyValue("border-left-width").match(/\d+/);
-    let borderRightWidth = computed.getPropertyValue("border-right-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(width + paddingLeft + paddingRight); };
-    if (boxSizing == "padding-box") { return makePixel(width); };
-    if (boxSizing == "border-box") { return makePixel(width - borderLeftWidth - borderRightWidth); };
-    return makePixel(width);
-  },
-  "--padding-box-height": (computed)=>{
-    let boxSizing = computed.getPropertyValue("box-sizing");
-    let height = computed.getPropertyValue("height").match(/\d+/);
-    let paddingTop = computed.getPropertyValue("padding-top").match(/\d+/);
-    let paddingBottom = computed.getPropertyValue("padding-bottom").match(/\d+/);
-    let borderTopWidth = computed.getPropertyValue("border-top-width").match(/\d+/);
-    let borderBottomWidth = computed.getPropertyValue("border-bottom-width").match(/\d+/);
-    if (boxSizing == "content-box") { return makePixel(height + paddingTop + paddingBottom); };
-    if (boxSizing == "padding-box") { return makePixel(height); };
-    if (boxSizing == "border-box") { return makePixel(height - borderTopWidth - borderBottomWidth); };
+  "--padding-box-height": (element, computed)=>{
+    let height = element.clientHeight;
     return makePixel(height);
   },
   "--width": "width",
@@ -116,7 +72,7 @@ let applyProperties = (element, computedStyle) => {
   for (let key in propMap) {
     let functor = propMap[key];
     let value = null;
-    if (typeof functor == "function") { value = functor(computedStyle); };
+    if (typeof functor == "function") { value = functor(element, computedStyle); };
     if (typeof functor === 'string' || functor instanceof String) { value = convert(computedStyle.getPropertyValue(functor)); };
     if (element.attributeStyleMap) {
       element.attributeStyleMap.set(key, convertToUnparsed(value));
@@ -133,6 +89,12 @@ let updateProperties = (arg, options) => {
   if (isElement(arg)) elements = [arg];
 
   // 
+  let obj = {
+    elements: elements,
+    observers: []
+  };
+
+  // 
   elements.forEach((element)=>{ 
     let computedStyle = window.getComputedStyle(element, options.pseudo);
     applyProperties(element, computedStyle);
@@ -141,9 +103,12 @@ let updateProperties = (arg, options) => {
       observe.addListener((entry)=>{
         applyProperties(element, entry.computed);
       });
+      obj.observers.push(observe);
     }
   });
   
+  return obj;
+
 };
 
 export default {updateProperties};
