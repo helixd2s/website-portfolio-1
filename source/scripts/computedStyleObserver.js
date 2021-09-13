@@ -27,14 +27,17 @@ let runObservation = async() => {
     observations.forEach((observed)=>{
       if (observed.listeners.length > 0) {
         hasListeners = true;
+        let changed = [];
         let computedStyle = getComputedStyle(observed.element, observed.pseudo);
         observed.computed = computedStyle;
         observed.entries.forEach((entry)=>{
           entry.computed = computedStyle;
-          entry.value = computedStyle.getPropertyValue(entry.entry); 
-          if (entry.value != entry.oldValue) { observed.listeners.forEach((cb)=>{ cb(entry); }); };
+          entry.value = computedStyle.getPropertyValue(entry.entry);
+          if (entry.value != entry.oldValue) { changed.push(entry); };
           entry.oldValue = entry.value;
+          entry.listeners.forEach((cb)=>{ cb(entry); });
         });
+        observed.listeners.forEach((cb)=>{ cb({ computed: computedStyle, changed: changed }); });
       };
     });
     await flamer.next();
@@ -70,6 +73,18 @@ class ComputedStyleEntry {
     this.value = value;
     this.oldValue = oldValue;
     this.computed = computed;
+    this.listeners = [];
+  }
+
+  addListener(cb) {
+    this.listeners.push(cb);
+  }
+
+  removeListener(cb) {
+    const index = this.listeners.indexOf(cb);
+    if (index > -1) {
+      this.listeners.splice(index, 1);
+    }
   }
 }
 

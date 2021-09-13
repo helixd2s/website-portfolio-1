@@ -63,5 +63,10 @@ module.exports = {
     new HtmlWebpackPugPlugin({
       adjustIndent: true
     })
-  ]
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, './'),
+    },
+  }
 };
