@@ -38,12 +38,12 @@
   }
 
   .avatar {
-              
+    // by using my library, you can center avatar without transform
+
     position: absolute;
     overflow: visible;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: calc(100% - calc(var(--border-box-height) / 2));
+    left: calc(50% - calc(var(--border-box-width) / 2));
     width: 62px;
     height: 62px;
     background-image: var(--bg-image);

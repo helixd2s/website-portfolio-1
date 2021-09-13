@@ -18,6 +18,10 @@ import 'swiper/css/pagination'
 import asmcss from '@asmcss/assembler';
 
 //
+import mapper from './styleMapper';
+import observer from './computedStyleObserver';
+
+//
 //import bootstrap from 'bootstrap'
 
 //
@@ -106,5 +110,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
       };
     });
   }
+
+  mapper.updateProperties(".card .avatar", {
+    pseudo: "",
+    observe: false
+  });
 });
+
+
 
