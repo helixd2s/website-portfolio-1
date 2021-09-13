@@ -18,7 +18,7 @@ import 'swiper/css/pagination'
 import asmcss from '@asmcss/assembler';
 
 //
-import {CSObserver, PropertyMapper} from 'css-utils';
+import {CSObserver, PropertyMapper} from 'css-utils-js';
 const ComputedStyleObserver = CSObserver.ComputedStyleObserver;
 
 //
