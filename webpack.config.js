@@ -50,8 +50,7 @@ module.exports = {
   },
   entry: './source/scripts/main.js',
   output: {
-    
-    publicPath: path.resolve(__dirname, './') + "/",
+    publicPath: "./",
     path: path.resolve(__dirname, './') + "/",
     filename: 'scripts/main.js'
   },
