@@ -120,6 +120,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     pseudo: "",
     observe: true
   });
+
+  let mouse = PropertyMapper.listenMouse(".faq", {
+    pseudo: "",
+  });
 });
 
 

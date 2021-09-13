@@ -13,6 +13,7 @@
   "dependencies": {
     "@asmcss/assembler": "^0.4.1",
     "bootstrap": "^5.1.1",
+    "referentiel": "^1.0.3",
     "swiper": "^7.0.3",
     "to-string-loader": "^1.1.6"
   }
