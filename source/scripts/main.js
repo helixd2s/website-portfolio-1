@@ -115,6 +115,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     pseudo: "",
     observe: false
   });
+
+  let faq = PropertyMapper.updateProperties(".faq", {
+    pseudo: "",
+    observe: true
+  });
 });
 
 
