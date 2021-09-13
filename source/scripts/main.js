@@ -18,8 +18,8 @@ import 'swiper/css/pagination'
 import asmcss from '@asmcss/assembler';
 
 //
-import mapper from './styleMapper';
-import observer from './computedStyleObserver';
+import {CSObserver, PropertyMapper} from 'css-utils';
+const ComputedStyleObserver = CSObserver.ComputedStyleObserver;
 
 //
 //import bootstrap from 'bootstrap'
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
   }
 
-  mapper.updateProperties(".card .avatar", {
+  let mapping = PropertyMapper.updateProperties(".card .avatar", {
     pseudo: "",
     observe: false
   });
